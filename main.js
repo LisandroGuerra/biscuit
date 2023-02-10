@@ -55,10 +55,21 @@ const quotes = [
     }]
 
 const quoteElement = getQuoteItem(quotes)
+let atHomeScreen = luckScreen.classList.contains('hide')
 
 // Events
 cookieImage.addEventListener('click', handleCookieClick)
 btnAnotherCookie.addEventListener('click', handleRestartClick)
+document.addEventListener('keydown', (event)=>{
+    if(event.key == 'Enter' && atHomeScreen){
+        console.log(atHomeScreen)
+        handleCookieClick(event)
+        atHomeScreen = luckScreen.classList.contains('hide')
+    } else {
+        console.log(atHomeScreen)
+        handleRestartClick(event)
+    }
+})
 
 // Functions
 function getQuoteItem(array){
@@ -77,7 +88,6 @@ function handleCookieClick(event){
     .innerText = `${quoteElement
         .quote} (${quoteElement
             .author})`
-    
     
 }
     
