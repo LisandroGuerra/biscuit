@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.hide {
+    display: none;   
+}
+
+main {
+    background-color: white;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+    border-radius: .6rem;
+    padding: 4.8rem;
+    margin-top: 4rem;
+
+    text-align: center;
+
+    width: min(42.8rem, 90%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    width: 25.8rem;
+    height: 5.8rem;
+    margin-bottom: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    width: 24rem;
+    height: 2rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+}
+
+h1, p {
+    color: #34355b;
+}
+
+img {
+    height: 20rem;
+    width: 30rem;
+}
+
+button {    
+    padding: 1.6rem;
+    background: #FF9500;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25);;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem; 
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+
+/* Home screen */
+.home-screen .container h1 {
+    width: 25.8rem;
+    height: 5.8rem;
+    text-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.5);
+}
+
+.home-screen .container p {
+    margin-bottom: 1.6rem;
+}
+
+.home-screen .container img:hover {
+    cursor: pointer;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
+/* Luck screen */
+.luck-screen h1 {
+    width: 29.7rem;
+    
+}
+
+.luck-screen button {
+    border-radius: .4rem;
+}
+
+.ticket {
+    
+    background: #E4EDF1;
+    border-radius: 4px;
+    box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+    font-family: "Dancing Script", sans-serif;
+    font-size: 2.4rem;
+    font-weight: normal;
+
+    animation-name: getin;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+/* Background */
+.gradient {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    /* Colors generated on: https://colorhunt.co/palette/179481 */
+    background: linear-gradient(45deg, #084177, #687466, #7bcdbf, #8686f8);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  
+  @keyframes getin {
+    from {opacity: 0; transform: translateY(15rem) scale(.1);}
+    to {opacity: 1; transform: translateY(0) scale(1)}
+  }
