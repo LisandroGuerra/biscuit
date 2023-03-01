@@ -7,7 +7,11 @@
 
 <div align="center">
 
-<img src="assets/biscuit.gif">
+<!-- <img src="assets/biscuit.gif"> -->
+ <video muted loop autoplay>
+  <source src="biscuit.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
 
 
 you can see the project [here](https://lisandroguerra.github.io/explorer_biscuit/)
